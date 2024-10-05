@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace AppTransacciones.Models
-{
+{   [Table ("t_transaccion")]
     public class Transaccion
     {
         public enum Transaccion_TYPES{
@@ -28,7 +28,7 @@ namespace AppTransacciones.Models
         public double? monto_final {get; set; }
         public string? Estado_Transaccion{get; set; }
         [Required]
-        public required Transaccion_TYPES TipoMonto {get; set; }
+        public required Transaccion_TYPES TipoMonto {get; set; } = Transaccion_TYPES.USD;
 
         public void CalcularMonto(){
             if (TipoMonto == 0){

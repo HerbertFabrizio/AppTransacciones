@@ -1,0 +1,41 @@
+@model IEnumerable<AppTransacciones.Models.Transaccion>
+
+@{
+    ViewData["Title"]= "Listar Transacciones";
+}
+<h1>@ViewData["Title"]</h1>
+
+<div class="container mt-5">
+    <h2 class="mb-4"> Listado de transacciones internacionales</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Nombre del remitente</th>
+                <th>Nombre del destinatario</th>
+                <th>Pais de origen</th>
+                <th>Destino</th>
+                <th>Tipo de monto</th>
+                <th>Monto enviado</th>
+                <th>Tasa de cambio</th>
+                <th>Monto final</th>
+                <th>Estado de la transaccion</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var transaccion in Model)
+            {
+                <tr>
+                    <td>@transaccion.Remitente</td>
+                    <td>@transaccion.Destinatario</td>
+                    <td>@transaccion.Pais_origen</td>
+                    <td>@transaccion.Destino</td>
+                    <td>@transaccion.TipoMonto</td>
+                    <td>@transaccion.Monto</td>
+                    <td>@transaccion.Tasa_cambio</td>
+                    <td>@transaccion.monto_final</td>
+                    <td>@transaccion.Estado_Transaccion</td>
+                </tr>
+            }        
+        </tbody>
+    </table>
+</div>
