@@ -15,4 +15,4 @@ COPY --from=build-env /app/out .
 
 ENV APP_NET_CORE AppTransacciones.dll
 
-CMD ASPNETCORE_URLS=http://0.0.0.0:$PORT dotnet $APP_NET_CORE
+CMD ASPNETCORE_URLS=http://*:$PORT dotnet $APP_NET_CORE
