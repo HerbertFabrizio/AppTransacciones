@@ -1,2 +1,8 @@
 obj/
 bin/
+Data/Migrations/00000000000000_CreateIdentitySchema.Designer.cs
+Data/Migrations/20241005031320_MigracionDatos.cs
+Data/Migrations/20241005031320_MigracionDatos.Designer.cs
+Data/Migrations/20241005041202_MigracionDatosPostGresSQL.cs
+Data/Migrations/20241005041202_MigracionDatosPostGresSQL.Designer.cs
+Data/Migrations/00000000000000_CreateIdentitySchema.cs
